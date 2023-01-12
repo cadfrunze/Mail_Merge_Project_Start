@@ -26,7 +26,22 @@ for char in list_prov:
         numele = numele + char
     if char == list_prov[-1]:
         list_name.append(numele)
-print(list_name)
+
+
+def create_letter(name):
+    with open("./Input/Letters/starting_letter.txt", "r") as letter:
+        scrisoarea = letter.read()
+        scrisoarea = scrisoarea.replace("[name]", name)
+        scrisoarea = scrisoarea.replace("Angela", "Maryus")
+    with open("./Output/ReadyToSend/letter_for_"+name, mode="w" ) as letter1:
+        letter1.write(scrisoarea)
+
+for num in list_name:
+    create_letter(name=num)
+
+
+
+
 
 
 
