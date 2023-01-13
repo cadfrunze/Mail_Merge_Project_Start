@@ -27,7 +27,7 @@ def create_letter(name):
 for num in lista_nume:
     new_name = num.strip()
     print(new_name)
-    create_letter(name=num)
+    create_letter(name=new_name)
 
 
 
